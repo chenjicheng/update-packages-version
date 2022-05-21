@@ -1,0 +1,1 @@
+ssh://aur@aur.archlinux.org/firefox-nightly-bin.git
