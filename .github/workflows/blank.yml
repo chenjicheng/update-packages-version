@@ -33,7 +33,7 @@ jobs:
           cp config ~/.ssh/config
           printf "%s" "${{ secrets.AURSSHKEY }}" > ~/.ssh/aur
           chmod 400 ~/.ssh/aur
-          ssh -o "StrictHostKeyChecking no" -T aur@aur.archlinux.org
+          ssh -o "StrictHostKeyChecking no" aur@aur.archlinux.org help
 
       # Runs a single command using the runners shell
       - name: Run
