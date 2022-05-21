@@ -1,1 +1,3 @@
+ssh://aur@aur.archlinux.org/arduino-cli-bin.git
 ssh://aur@aur.archlinux.org/firefox-nightly-bin.git
+ssh://aur@aur.archlinux.org/obs-plugin-input-overlay-git.git
