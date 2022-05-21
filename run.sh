@@ -1,10 +1,5 @@
 #!/bin/bash
 
-mkdir ~/.ssh
-cp config ~/.ssh/config
-
-ssh -o "StrictHostKeyChecking no" -T aur@aur.archlinux.org
-
 git config --global user.name "Github Actions"
 git config --global user.email "git@chenjicheng.com"
 
