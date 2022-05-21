@@ -31,8 +31,7 @@ jobs:
         run: |
           mkdir ~/.ssh
           cp config ~/.ssh/config
-          printf '${{ secrets.RCLONE_CONFIG }}' > ~/.ssh/aur
-          cat ~/.ssh/aur
+          printf '${{ secrets.SSHKEY }}' > ~/.ssh/aur
           chmod 400 ~/.ssh/aur
           ssh -o "StrictHostKeyChecking no" -T aur@aur.archlinux.org
 
