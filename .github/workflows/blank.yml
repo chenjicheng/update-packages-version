@@ -31,7 +31,7 @@ jobs:
         run: |
           mkdir ~/.ssh
           cp config ~/.ssh/config
-          printf "${{ secrets.AURSSHKEY }}" > ~/.ssh/aur
+          printf "%s" "${{ secrets.AURSSHKEY }}" > ~/.ssh/aur
           chmod 400 ~/.ssh/aur
           ssh -o "StrictHostKeyChecking no" -T aur@aur.archlinux.org
 
