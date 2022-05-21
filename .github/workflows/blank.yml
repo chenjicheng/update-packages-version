@@ -28,7 +28,11 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Create sshkey
-        run: printf '${{ secrets.RCLONE_CONFIG }}' > ~/.ssh/aur
+        run: |
+          mkdir ~/.ssh
+          cp config ~/.ssh/config
+          printf '${{ secrets.RCLONE_CONFIG }}' > ~/.ssh/aur
+          ssh -o "StrictHostKeyChecking no" -T aur@aur.archlinux.org
 
       # Runs a single command using the runners shell
       - name: Run
