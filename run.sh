@@ -9,7 +9,7 @@ if [[ -n $(cat repolist.txt) ]]; then
 		git clone $line
 		cd $dir
 		docker run --rm -e EXPORT_SRC=1 -v $PWD:/pkg ghcr.io/chenjicheng/docker-makepkg:main
-		git commit -am "Update version"
+		git commit -am "Update version to $(awk -F '=' '/pkgver/{print $2;exit}' PKGBUILD)"
 		git push
 		cd ..
 		rm -rf $dir
